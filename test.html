@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #111;
+                color: #fff;
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px;
+            }
+
+            .item {
+                flex: 1 0 25%;
+                padding: 40px;
+                margin: 10px;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+
+            /* Example styling for the grid items */
+            .item:nth-child(odd) {
+                background-color: #224;
+            }
+
+            .item:nth-child(even) {
+                background-color: #242;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+            <div class="item">Item 9</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+            <div class="item">Item 9</div>
+        </div>
+    </body>
+</html>

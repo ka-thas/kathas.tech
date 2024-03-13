@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --background-color: #0f6e5c00;
+}
+body {
+    font-family: urbanist, sans-serif;
+    font-size: larger;
+    color: #fff;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  linear-gradient(#444cf7 2px, transparent 2px), linear-gradient(90deg, #444cf7 2px, transparent 2px), linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(90deg, #444cf7 1px, #e5e5f7 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+div {
+    border-radius: 15px;
+    border: 2px solid #151;
+}
+h1 {
+    padding: 20px;
+    font-size: 100px;
+    background-color: var(--background-color);
+    margin: 0;
+}
+nav {
+    background-color: var(--background-color);
+    color: #fff;
+    padding: 20px;
+}
+nav ul {
+    background-color: var(--background-color);
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--background-color);
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+/* Photo by <a href="https://unsplash.com/@googledeepmind?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Google DeepMind</a> on <a href="https://unsplash.com/photos/map-s2TPKAD6fag?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>*/
