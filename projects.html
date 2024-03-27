@@ -3,26 +3,54 @@
     <head>
         <title>Ka Thas</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <style>
+            ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            li {
+                margin: 8px 0px;
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
     </head>
     <body>
         <main>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
             <section>
-                <h2>My Projects</h2>
+                <div id="breadcrumbs">
+                    <a href="./index.html">Home</a> >
+                    <a href="./projects.html">Projects</a>
+                </div>
+                <h1>My Projects</h1>
+                <p>
+                    Here are some of the projects I have worked on. Most of the
+                    source code is on my
+                    <a href="https://github.com/ka-thas"> GitHub </a>
+                </p>
+
                 <ul>
-                    <li>Virtual plant</li>
+                    <li>
+                        <a href="#plant"> Virtual Plant</a>
+                    </li>
                     <li>Eco system simulation</li>
                     <li>Electric scooter map</li>
                 </ul>
+            </section>
+            <section>
+                <h2 id="plant">Virtual Plant</h2>
+                <p>
+                    This is a virtual plant that I made using JS, HTML and CSS.
+                    It's essentially a Tamagotchi but with only one need: water.
+                    The plant will grow while it has water or die if it doesn't
+                    get water for a long time.
+                </p>
+                <p>
+                    <a href="https://ka-thas.github.io/plant"
+                        >View the plant 🪴</a
+                    >
+                </p>
             </section>
         </main>
     </body>
