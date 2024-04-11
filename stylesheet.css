@@ -11,7 +11,6 @@ body {
 }
 
 h1 {
-    padding: 20px;
     font-size: 100px;
     background-color: var(--background-color);
     margin: 0;
@@ -47,15 +46,26 @@ section {
     padding: 20px;
     background-color: var(--background-color);
 }
-#breadcrumbs {
-    border-radius: 20px;
-    padding: 5px 15px;
-    width: fit-content;
-    background-color: rgba(143, 133, 148, 0.369);
+#breadcrumbs, #breadcrumbs a{
+    color: #999
+
+}
+#breadcrumbs a:hover {
+    color: #fff;
 }
 a {
     color: #00ff80;
     text-decoration: none;
+}
+a:hover {
+    color: #efff78;
+}
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow:  0px 2px 20px #00000044;
 }
 .gradient-text {
     background: linear-gradient(100deg, #00ff80, #efff78);
