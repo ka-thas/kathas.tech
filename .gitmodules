@@ -3,4 +3,4 @@
 	url = https://github.com/ka-thas/plant
 [submodule "snake-js"]
 	path = snake-js
-	url = ./snake-js
+	url = https://github.com/ka-thas/snake-js
