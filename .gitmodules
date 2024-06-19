@@ -4,3 +4,6 @@
 [submodule "snake-js"]
 	path = snake-js
 	url = https://github.com/ka-thas/snake-js
+[submodule "nursery-website"]
+	path = nursery-website
+	url = git@github.com:ka-thas/nursery-website.git
