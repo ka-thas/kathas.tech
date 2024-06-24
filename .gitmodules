@@ -7,3 +7,6 @@
 [submodule "nursery-website"]
 	path = nursery-website
 	url = git@github.com:ka-thas/nursery-website.git
+[submodule "electric-scooter-map"]
+	path = electric-scooter-map
+	url = git@github.com:ka-thas/electric-scooter-map.git
