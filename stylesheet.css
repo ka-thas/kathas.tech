@@ -2,16 +2,25 @@
 :root {
     --background-color: #0f6e5c00;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     font-family: urbanist, sans-serif;
     font-size: larger;
     background-color: #111;
-    background: linear-gradient(270deg, rgba(16,16,16,1) 0%, rgba(33,13,73,1) 100%);
+    background: linear-gradient(to right, rgb(46, 71, 63) 0%, rgb(47, 77, 53) 100%);
     color: #fff;
 }
 
+@media only screen and (min-width: 601px) {
+    h1 {
+      font-size: 100px;
+    }
+}
+
 h1 {
-    font-size: 100px;
+    font-size: 80px;
     background-color: var(--background-color);
     margin: 0;
 }
@@ -21,13 +30,13 @@ nav {
     padding: 20px;
 }
 main {
-    padding: 20px;
+    padding: 0px;
     max-width: 1000px;
     margin: 0 auto;
 }
 section {
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 0px;
     background-color: var(--background-color);
 }
 #breadcrumbs, #breadcrumbs a{
@@ -45,10 +54,9 @@ a:hover {
     color: #efff78;
 }
 img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
-    border: .5px solid #bbaacc80;
     box-shadow:
         0px 1.2px 2.2px rgba(0, 0, 0, 0.028),
         0px 3px 5.3px rgba(0, 0, 0, 0.035),
