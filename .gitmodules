@@ -10,3 +10,6 @@
 [submodule "electric-scooter-map"]
 	path = electric-scooter-map
 	url = git@github.com:ka-thas/electric-scooter-map.git
+[submodule "flashcards"]
+	path = flashcards
+	url = git@github.com:ka-thas/flashcards.git
