@@ -78,6 +78,7 @@
             }
 
             #notification {
+                font-size: larger;
                 position: absolute;
                 top: 10px;
                 margin: auto;
@@ -148,11 +149,7 @@
                     </svg>
                     <span class="link-text"> facebook </span>
                 </a>
-                <a
-                    href="https://www.facebook.com/kaaathas"
-                    target="_blank"
-                    class="icon-button shadow"
-                >
+                <a href="#" class="icon-button shadow" id="copyEmailButton">
                     <svg
                         class="icon"
                         viewBox="0 0 24 24"
@@ -216,5 +213,30 @@
                 </a>
             </div>
         </main>
+        <script>
+            document
+                .getElementById("copyEmailButton")
+                .addEventListener("click", function () {
+                    const email = "ka.thas";
+
+                    // Copy the email to the clipboard
+                    navigator.clipboard
+                        .writeText(email)
+                        .then(() => {
+                            console.log("Email copied to clipboard");
+                            document.getElementById(
+                                "notification"
+                            ).style.opacity = 1;
+                            setTimeout(() => {
+                                document.getElementById(
+                                    "notification"
+                                ).style.opacity = 0;
+                            }, 2000);
+                        })
+                        .catch((err) => {
+                            console.error("Failed to copy email: ", err); // Handle errors
+                        });
+                });
+        </script>
     </body>
 </html>
