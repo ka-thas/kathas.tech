@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Connect with me!</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
         <link rel="icon" href="assets/images/icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
@@ -29,13 +29,13 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                gap: 10px;
-                padding-top: 20px;
+                padding-top: 10px;
+                padding-bottom: 30px;
             }
             p {
                 text-align: center;
                 max-width: 400px;
-                margin: 0px 20px;
+                margin: 0px 20px 20px;
                 font-size: large;
             }
 
@@ -80,13 +80,15 @@
             #notification {
                 font-size: larger;
                 position: absolute;
-                top: 10px;
-                margin: auto;
-                background-color: #132d;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #132;
                 padding: 10px 20vw;
                 border-radius: 8px;
                 opacity: 0;
-                transition: opacity 0.3s;
+                transition: opacity 0.1s;
             }
         </style>
     </head>
@@ -212,6 +214,8 @@
                     <span class="link-text"> GitHub </span>
                 </a>
             </div>
+            🌱
+                
         </main>
         <script>
             document

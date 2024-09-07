@@ -22,5 +22,13 @@
             <a href="./projects/index.html">> Projects</a> <br />
             <a href="./contact.html">> Contact</a>
         </main>
+        <script>
+            // Redirect if .html is in the URL
+            if (window.location.pathname.endsWith(".html")) {
+                window.location.href =
+                    window.location.pathname.replace(".html", "") +
+                    window.location.search;
+            }
+        </script>
     </body>
 </html>

@@ -5,21 +5,17 @@
 html {
     scroll-behavior: smooth;
 }
-body,
-html {
-    overflow: hidden;
-    background-color: #111;
-}
 body {
     font-family: urbanist, sans-serif;
     font-size: larger;
-    background-color: #111;
+
     background: linear-gradient(
         to right,
         rgb(46, 71, 63) 0%,
         rgb(47, 77, 53) 100%
     );
     color: #fff;
+    background-color: #26503a;
 }
 
 @media only screen and (min-width: 601px) {
