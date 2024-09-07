@@ -1,15 +1,15 @@
 [submodule "plant"]
-	path = plant
+	path = projects/plant
 	url = https://github.com/ka-thas/plant
 [submodule "snake-js"]
-	path = snake-js
+	path = projects/snake-js
 	url = https://github.com/ka-thas/snake-js
 [submodule "nursery-website"]
-	path = nursery-website
+	path = projects/nursery-website
 	url = git@github.com:ka-thas/nursery-website.git
 [submodule "electric-scooter-map"]
-	path = electric-scooter-map
+	path = projects/electric-scooter-map
 	url = git@github.com:ka-thas/electric-scooter-map.git
 [submodule "flashcards"]
-	path = flashcards
+	path = projects/flashcards
 	url = git@github.com:ka-thas/flashcards.git
