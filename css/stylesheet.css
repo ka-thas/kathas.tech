@@ -25,18 +25,24 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 60px;
     background-color: var(--background-color);
     margin: 0;
 }
+h2 {
+    font-size: 40px;
+    background-color: var(--background-color);
+    margin: 0;
+}
+
 main {
     padding: 0px;
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0 auto;
 }
 #breadcrumbs,
 #breadcrumbs a {
-    color: #999;
+    color: #9c9d;
 }
 #breadcrumbs a:hover {
     color: #fff;
@@ -47,6 +53,13 @@ a {
 }
 a:hover {
     color: #efff78;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 4px 0px;
 }
 img {
     max-width: 100%;
