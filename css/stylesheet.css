@@ -62,10 +62,16 @@ li {
     margin: 4px 0px;
 }
 img {
-    max-width: 100%;
     height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 30em;
     border-radius: 10px;
 }
+.small-image {
+    max-height: 20em;
+}
+
 .shadow {
     box-shadow: 0px 1.2px 2.2px rgba(0, 0, 0, 0.028),
         0px 3px 5.3px rgba(0, 0, 0, 0.035), 0px 5.6px 10px rgba(0, 0, 0, 0.038),
