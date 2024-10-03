@@ -13,3 +13,6 @@
 [submodule "flashcards"]
 	path = projects/flashcards
 	url = git@github.com:ka-thas/flashcards.git
+[submodule "boids"]
+	path = projects/boids
+	url = git@github.com:ka-thas/boids.git
