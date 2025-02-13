@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ka Thas</title>
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+        <link rel="icon" href="./assets/images/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                text-align: center;
+                max-width: 450px;
+            }
+            #next {
+                padding: 10px 20px;
+                font-size: 20px;
+                border: none;
+                border-radius: 100px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+            #question {
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+
+                text-align: left;
+                height: 300px;
+                background-color: #f1f1f111;
+                padding: 20px;
+                border-radius: 20px;
+                border-top: 1px solid #f1f1f151;
+                border-bottom: 2px solid #1115;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <p>
+                <span style="font-size: 30px"> Questions for a deeper</span>
+                <span style="font-size: 30px" class="gradient-text"
+                    >connection</span
+                >
+            </p>
+            <br />
+
+            <h2 id="question"></h2>
+            <br />
+
+            <button id="next">Next →</button>
+            <footer>
+                <p style="text-align: center">🌱</p>
+            </footer>
+        </main>
+        <script>
+            // questions credit: https://www.teenvogue.com/story/20-questions-ask-best-friend-become-closer-relationships
+            let questions = [
+                "What’s the weirdest thing you’ve done in public?",
+                "What’s an embarrassing thing you’ve done and never told anyone about?",
+                "What’s the most bizarre text you’ve ever received?",
+                "What’s the cringiest thing you’ve ever put up on social media?",
+                "How much does your personality change when you’re around different people?",
+                "What’s the nicest thing someone has done for you?",
+                "If someone wrote a book about you, what would it be called?",
+                "Do you believe in having one best friend?",
+                "How do you define beauty?",
+                "What do you think is the most annoying quality a person can have?",
+                "Who do you think shouldn’t be a celebrity?",
+                "Who is/ was your most unexpected crush?",
+                "When/ where was your first kiss?",
+                "What type of person do you picture ending up with?",
+                "What’s your guilty pleasure movie/ TV show?",
+                "What’s your Roman Empire? (Something you can’t stop thinking about).",
+                "What’s the best piece of gossip you’ve ever received?",
+                "What’s your favorite travel story?",
+                "Have you ever had a crush on a cartoon character?",
+                "Would you ever open a business?",
+                "What’s the worst holiday in your opinion?",
+                "What are you putting off right now?",
+                "Did you build forts when you were a kid? What did they look like?",
+                "What do you think the best prank of all time is?",
+                "If you got to design a new instrument, what would you create and what would it sound like?",
+                "Is there anything you’d wait in line for a week to do, see, or get?",
+                "If flowers could talk, what do you think they would sound like?",
+                "If you could choose only one condiment to eat for the rest of your life, which would you choose?",
+                "If you could be any household item, which would you choose?",
+                "If you were a ghost, how would you haunt people?",
+                "What bodily function do you wish would just go away?",
+                "If you had to eat an entire barrel of one single thing, what would you choose?",
+                "If you could shoot anything from a cannon, what would you pick?",
+                "Do you have a favorite family tradition?",
+                "Describe your dream house.",
+                "What’s your favorite cheesy joke?",
+                "If you could name your brain, what would you name it?",
+                "What subject would you take a crash course in?",
+                "What’s your favorite form of transportation?",
+                "If you could only dress in one color for the rest of your life, which would you choose?",
+                "How gullible do you consider yourself?",
+                "What do you think you’ll be doing exactly 10 years from this moment?",
+                "What’s the spiciest food you’ve ever eaten?",
+                "What embarrasses you the most?",
+                "What’s your love language?",
+                "How do you like to be comforted when you’re sad or upset?",
+                "What’s your all-time favorite memory?",
+                "Where do you hope to be five years from now? Ten? Fifteen?",
+                "When have you felt the most challenged?",
+                "Have you ever been bullied?",
+                "Which celeb would you want as your other BFF and why?",
+                "Out of all your family members, who are you closest to?",
+                "What do you do when no one else is around?",
+                "What’s one thing most people don’t know about you?",
+                "What do you think happens when we die?",
+                "Do you want to have kids one day? How many?",
+                "What's the worst you've ever been physically hurt?",
+                "What's your earliest childhood memory?",
+                "When you can't sleep, what keeps you up at night?",
+                "What's the last lie you told?",
+                "What's the best compliment you've ever received?",
+                "What do you consider the ultimate comfort food?",
+                "What do you consider your best physical feature?",
+                "What are the top three things that stress you out?",
+                "What are the top three ways you deal with stress?",
+                "If you could only have three things on your life bucket list, what would they be?",
+                "If you choose to get married one day, what would your dream proposal scenario be?",
+                "What’s the most loved you’ve ever felt?",
+                "If you could create a theme park, what would it look like?",
+                "When’s the last time you felt inspired to create something?",
+                "Have you ever experienced a “friendship breakup”? What did it teach you?",
+                "Who was your first friend, and are they still in your life?",
+                "Would you ever consider being in a long-distance relationship?",
+                "What do you think the best way to resolve conflict is?",
+                "How did your parents meet?",
+                "Do you feel that you have a healthy relationship with social media?",
+                "Who’s been your favorite teacher?",
+                "What are your favorite childrens’ names?",
+                "Is there a time when I made you feel particularly well supported?",
+                "How can I be a better friend to you?",
+                "What does friendship mean to you?",
+                "What do you feel the most guilty about?",
+                "Who do you wish you could reconnect with?",
+                "What stresses you out the most?",
+                "When do you feel the most alone?",
+                "Have you ever been in love?",
+                "Do you believe in love at first sight?",
+                "What’s the biggest lesson your last relationship taught you?",
+                "What’s one thing you would change about yourself?",
+                "Who is someone you wish you could apologize to?",
+                "What was the last turning point in your life?",
+                "What thing keeps you going on hard days?",
+                "Who do you feel the safest around?",
+                "What’s your favorite childhood memory?",
+                "What’s the biggest leap of faith you’ve taken?",
+                "Who do you look up to the most, and what qualities do you love about that person?",
+                "What’s your biggest fear?",
+                "Who was the last person to make you cry and why?",
+                "When have you felt the most proud?",
+                "Do you have any regrets? If so, what are they?",
+                "What's the best present you ever received? Who gave it to you and why was it so special?",
+                "If you could change one thing about yourself, what would it be?",
+                "Do you believe in soulmates?",
+                "What has your hardest goodbye in life been so far?",
+                "When was the last time you were jealous and why?",
+                "What’s the worst decision you’ve ever made?",
+                "What do you think you’ll be like in old age?",
+                "What’s something you’d consider unforgivable?",
+                "Would you rather be an expert at one thing, or pretty good at many things?",
+                "What’s your favorite thing you own and why?",
+                "Have you ever had your fortune told?",
+                "Would you rather order in or eat out?",
+                "What was the first movie you remember seeing in theaters?",
+                "What’s your favorite podcast?",
+                "What’s been your most questionable haircut and/or fashion moment?",
+                "If money was no object, what would you buy?",
+                "What did you dream about last night?",
+                "When was the moment in your life you laughed the hardest?",
+                "What do you do when no one else is around?",
+                "Where do you want to travel the most?",
+                "If you could only eat one thing for the rest of your life, what would it be?",
+                "What book has impacted you the most?",
+                "What’s your favorite commercial?",
+                "What are the qualities that attract you most in a love interest?",
+                "You just won $10,000 — what are you going to do with the money?",
+                "What's the luckiest thing that's ever happened to you?",
+                "What's your favorite way to exercise?",
+                "Do you like roller coasters?",
+                "What is your most hated chore and why?",
+                "What's your favorite holiday and why?",
+                "What’s the worst date you’ve ever been on?",
+                "If you were going to get some ink, what would you choose and why?",
+                "If you had three wishes, what would you wish for?",
+                "If you had to choose only one, would you pick a dog or a cat?",
+                "Do you believe in aliens?",
+                "If you were President, what's the first thing you would work to change in this country?",
+                "If you had to live in another time period, what would you choose?",
+                "Who was your very first crush?",
+                "What foreign language(s) would you want to master and why?",
+                "What's your all-time favorite dessert?",
+                "Do you believe in ghosts?",
+                "What’s your survival plan during a zombie apocalypse?",
+                "If you were an animal, what would you be?",
+                "If you had to create an alter ego for yourself, who would it be and what would you name them?",
+                "1 karaoke song?",
+                "Have you ever been on a blind date?",
+                "What was your AIM screen name, or your first email address?",
+                "What’s your favorite piece of random trivia?",
+                "What was your first concert?",
+                "Which decade, in your opinion, had the best fashion trends?",
+                "If a song played every time you entered a room, what would it be?",
+                "What’s your skincare routine?",
+                "Did you ever go to summer camp?",
+                "When was the last time you got to really experience nature?",
+                "Do you feel that you’re young at heart, or an old soul?",
+                "What does your name mean, and why was it given to you?",
+                "What’s an unexpected movie that makes you cry?",
+            ];
+
+            let currentQuestion = Math.floor(Math.random() * questions.length);
+            let question = document.getElementById("question");
+            let next = document.getElementById("next");
+
+            question.textContent = questions[currentQuestion];
+
+            next.addEventListener("click", () => {
+                currentQuestion = Math.floor(Math.random() * questions.length);
+                question.textContent = questions[currentQuestion];
+            });
+        </script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
