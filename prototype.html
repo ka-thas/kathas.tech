@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ka Thas</title>
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+        <link rel="icon" href="./assets/images/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                gap: 30px;
+            }
+            #next {
+                padding: 10px 20px;
+                font-size: 20px;
+                border: none;
+                border-radius: 100px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <p>
+                <span style="font-size: 40px"> Questions for a deeper</span>
+                <span style="font-size: 40px" class="gradient-text"
+                    >connection</span
+                >
+            </p>
+            <br />
+
+            <h1 id="question"></h1>
+
+            <button id="next">Next →</button>
+        </main>
+        <script>
+            let questions = [
+                "What is your name?",
+                "What is your age?",
+                "What is your favorite color?",
+            ];
+            let currentQuestion = 0;
+            let question = document.getElementById("question");
+            let next = document.getElementById("next");
+
+            question.textContent = questions[currentQuestion];
+
+            next.addEventListener("click", () => {
+                currentQuestion++;
+                if (currentQuestion >= questions.length) {
+                    currentQuestion = 0;
+                }
+                question.textContent = questions[currentQuestion];
+            });
+        </script>
+    </body>
+</html>
