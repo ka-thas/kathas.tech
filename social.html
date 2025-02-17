@@ -103,8 +103,8 @@
                 <span class="gradient-text nerko-one-regular">Ka Thas</span>
             </h1>
             <p>
-                Hi 👋 I'm Ka from Norway, exploring Seoul 🌏 Lover of cafes ☕
-                plants 🪴 and sketching ✏️ <br />
+                Hi 👋 I'm Ka from Oslo, Norway 🇳🇴 I like sketching ✏️ and taking
+                care of plants 🪴<br />
                 Let's connect 💚
             </p>
 
@@ -148,7 +148,7 @@
                     </svg>
                     <span class="link-text"> facebook </span>
                 </a>
-                <a href="#" class="icon-button shadow" id="copyEmailButton">
+                <!-- <a href="#" class="icon-button shadow">
                     <svg
                         class="icon"
                         viewBox="0 0 24 24"
@@ -160,7 +160,7 @@
                         />
                     </svg>
                     <span class="link-text"> KakaoTalk </span>
-                </a>
+                </a> -->
                 <a
                     href="https://www.snapchat.com/add/ka.thas"
                     target="_blank"
@@ -213,38 +213,5 @@
             </div>
             🌱
         </main>
-        <script>
-            document
-                .getElementById("copyEmailButton")
-                .addEventListener("click", function () {
-                    const email = "ka.thas";
-
-                    // Copy the email to the clipboard
-                    navigator.clipboard
-                        .writeText(email)
-                        .then(() => {
-                            console.log("Email copied to clipboard");
-                            document.getElementById(
-                                "notification"
-                            ).style.opacity = 1;
-                            document.getElementById(
-                                "notification"
-                            ).style.zIndex = 2;
-                            setTimeout(() => {
-                                document.getElementById(
-                                    "notification"
-                                ).style.opacity = 0;
-                            }, 2000);
-                            setTimeout(() => {
-                                document.getElementById(
-                                    "notification"
-                                ).style.zIndex = 0;
-                            }, 2100);
-                        })
-                        .catch((err) => {
-                            console.error("Failed to copy email: ", err); // Handle errors
-                        });
-                });
-        </script>
     </body>
 </html>

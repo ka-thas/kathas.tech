@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>QR Codes</title>
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+        <link rel="icon" href="assets/images/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+
+            .qr-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                max-width: 1200px;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .qr-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+                background: var(--background-color);
+                border-radius: 12px;
+                transition: transform 0.2s;
+            }
+
+            .qr-item img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+
+            .qr-label {
+                font-size: 1.2em;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="qr-container" id="qrContainer"></div>
+
+        <script>
+            function getLabel(filename) {
+                return filename
+                    .replace("QR", "")
+                    .replace(".png", "")
+                    .replace(/_/g, " ");
+            }
+
+            function createQRElement(filename) {
+                const label = getLabel(filename);
+
+                const qrItem = document.createElement("div");
+                qrItem.className = "qr-item";
+
+                const img = document.createElement("img");
+                img.src = `assets/images/${filename}`;
+                img.alt = `QR code for ${label}`;
+
+                const labelDiv = document.createElement("div");
+                labelDiv.className = "qr-label";
+                labelDiv.textContent = label;
+
+                qrItem.appendChild(img);
+                qrItem.appendChild(labelDiv);
+
+                return qrItem;
+            }
+
+            async function loadQRCodes() {
+                const container = document.getElementById("qrContainer");
+
+                // Manually list the QR code filenames here
+                const qrFiles = ["QRHome.png", "QRSocial.png", "QRContact.png"];
+
+                qrFiles.forEach((filename) => {
+                    const qrElement = createQRElement(filename);
+                    container.appendChild(qrElement);
+                });
+            }
+
+            window.addEventListener("load", loadQRCodes);
+        </script>
+    </body>
+</html>
