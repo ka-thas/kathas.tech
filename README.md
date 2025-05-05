@@ -1,1 +1,3 @@
-Just a repo to host my website. Hope this works
+Old domain - No longer updated
+
+Check new domain repo at https://github.com/ka-thas/kathas.no
